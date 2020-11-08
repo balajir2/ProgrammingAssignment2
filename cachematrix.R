@@ -1,7 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## makeCacheMatrix creates the first object with the original object
+## passed to the CacheSolve function call
 
-## Write a short comment describing this function
+## It initializes a NULL inverse matrix and creates the getters and setters
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -18,7 +18,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## When an matrix is passed to cacheSolve, the function checks in its global
+##environment for the cached inverse if the input object is same, else
+## calculates the new inverse using solve function
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
